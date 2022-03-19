@@ -24,3 +24,26 @@ body {
     border-radius: 32px;
     box-shadow: 15px 10px 0px 5px #00000033;
 }
+
+/*estilizando los botones*/
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #00916e;
+    box-shadow: 5px 5px 10px -3px #00000040,/*el 40 significa el porcentaje de opacidad*/ -5px -5px 15px 3px #00ffc11f;
+
+}
+
+button:active {
+    background-color: #006f54;
+}
+
+/*para evitar borde por defecto*/
+button:focus {
+    outline: none;
+}
