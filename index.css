@@ -43,7 +43,7 @@ button:active {
     background-color: #006f54;
 }
 
-/*para evitar borde por defecto*/
+/*para evitar borde por defecto cuando se hace click sobre el boton*/
 button:focus {
     outline: none;
 }
