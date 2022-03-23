@@ -8,6 +8,6 @@ class Display {
     }
 }
 
-agregarNumero(numero) {
+agregarNumero(numero); {
     this.valorActual = numero;
 }
