@@ -20,6 +20,11 @@ class Display {
         this.imprimirValores();  
     }
 
+    computar(tipo) {
+        this.tipoOperacion !== "igual" && this.calcular(); 
+        
+    }
+
     agregarNumero(numero) {
         if(numero === '.' && this.valorActual.includes('.')) return
         this.valorActual = this.valorActual.toString() + numero.toString();
@@ -30,5 +35,14 @@ class Display {
         this.displayValorActual.textContent = this.valorActual;
         this.displayValorAnterior.textContent = this.valorAnterior;
     }
-}
 
+
+    calcular() {
+        const valorAnterior = parseFloat(this.valorAnterior);
+        const valorActual = parseFloat(this.valorActual);
+
+        if(isNaN(valorActual)  || isNaN(valorAnterior)) return
+        this.valorActual = this.calculador[this.tipoOperacion](valorAnterior, valorActual);
+    }
+
+}
