@@ -7,6 +7,11 @@ class Display {
         this.valorAnterior = '';
     }
 
+    borrar() {
+        this.valorActual = this.valorActual.toString().slice(0,-1);
+        this.imprimirValores();
+    }
+
     agregarNumero(numero) {
         if(numero === '.' && this.valorActual.includes('.')) return
         this.valorActual = this.valorActual.toString() + numero.toString();
