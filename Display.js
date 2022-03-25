@@ -25,6 +25,7 @@ class Display {
         this.tipoOperacion = tipo;
         this.valorAnterior = this.valorActual || this.valorAnterior;
         this.valorActual = '';
+        this.imprimirValores();
     }
 
     agregarNumero(numero) {
