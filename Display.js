@@ -8,7 +8,8 @@ class Display {
     }
 
     agregarNumero(numero) {
-        this.valorActual = this.valorActual + numero;
+        if(numero === '.' && this.valorActual.includes('.')) return
+        this.valorActual = this.valorActual.toString() + numero.toString();
         this.imprimirValores();
     }
 
