@@ -21,8 +21,10 @@ class Display {
     }
 
     computar(tipo) {
-        this.tipoOperacion !== "igual" && this.calcular(); 
-        
+        this.tipoOperacion !== "igual" && this.calcular();
+        this.tipoOperacion = tipo;
+        this.valorAnterior = this.valorActual || this.valorAnterior;
+        this.valorActual = '';
     }
 
     agregarNumero(numero) {
